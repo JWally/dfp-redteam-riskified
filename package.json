@@ -1,0 +1,9 @@
+{
+  "name": "dfp-redteam-riskified",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Riskified Beacon (Web) client assessment: real sensor captured (beacon.riskified.com?shop=), full _0x deobfuscation (3,329 strings), payload {cart_token,shop,page_id,href,events} shipped to c.riskified.com/v2/client_infos; 'obfuscation' = b64(encodeURIComponent(JSON))+static shuffle — no key, reversible (authorized, public beacon, 2026-11-01)",
+  "scripts": { "obf-demo": "node scripts/rsk-obf-demo.mjs" },
+  "dependencies": {}
+}
