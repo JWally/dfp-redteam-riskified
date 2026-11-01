@@ -72,6 +72,25 @@ strings from the live sensor).
 - 🟢 Tamper with payload: any event/cart_token/shop field editable before send (no integrity)
 - 🟡 Mint token: payload is client-constructed (forgeable), but a live beacon POST wasn't captured to prove server acceptance; verdict is server-side
 
+## Demo video — the obfuscation is reversible
+
+**Watch the capture** (terminal capture of `scripts/rsk-obf-demo.mjs` — builds
+the payload, obfuscates it (`b64 + shuffle`), and shows `round-trip OK: true`
+with the full readable JSON):
+
+<img src="assets/videos/full-payload-demo.gif" width="720" alt="Riskified obfuscation demo" />
+
+<video controls preload="metadata" width="720"><source src="assets/videos/full-payload-demo.mp4" type="video/mp4"></video>
+
+Reproduce it yourself:
+
+```bash
+node scripts/rsk-obf-demo.mjs
+```
+
+Full detail: [RISKIFIED_ASSESSMENT_2026_11_01.md](RISKIFIED_ASSESSMENT_2026_11_01.md)
+[Download the mp4](https://raw.githubusercontent.com/JWally/dfp-redteam-riskified/main/assets/videos/full-payload-demo.mp4)
+
 ## Files
 
 - `scripts/rsk-obf-demo.mjs` — payload builder + obfuscation round-trip proof
